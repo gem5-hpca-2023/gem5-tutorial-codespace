@@ -1,0 +1,18 @@
+{
+    "hostRequirements": {
+        "cpus": 4,
+        "memory": "8gb",
+        "storage": "32gb"
+    },
+    "build": { "dockerfile": "Dockerfile" },
+    "postCreateCommand" : [
+        "git", "submodule", "update", "--init", "--recursive"
+	],
+	"extensions": [
+		"ms-vscode.cpptools",
+		"streetsidesoftware.code-spell-checker",
+		"eamodio.gitlens",
+		"ms-python.vscode-pylance",
+		"ms-python.python"
+	]
+}
