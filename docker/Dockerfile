@@ -1,15 +1,13 @@
-FROM gcr.io/gem5-test/ubuntu-20.04_all-dependencies:v22-0
+FROM gcr.io/gem5-test/ubuntu-22.04_all-dependencies:latest
 
-# Obtain the build gem5 binaries.
-COPY --from=gcr.io/gem5-test/gem5-builder:v22-0 /gem5/build/X86/gem5.fast /usr/local/bin/gem5-x86
-COPY --from=gcr.io/gem5-test/gem5-builder:v22-0 /gem5/build/ARM/gem5.fast /usr/local/bin/gem5-arm
-COPY --from=gcr.io/gem5-test/gem5-builder:v22-0 /gem5/build/RISCV/gem5.fast /usr/local/bin/gem5-riscv
+RUN apt -y update && apt -y install git
 
-# Obtain the cross compilers
-RUN mkdir /opt/cross-compiler
+RUN git clone https://gem5.googlesource.com/public/gem5 /gem5
 
-COPY --from=gcr.io/gem5-test/gnu-cross-compiler-aarch64 /opt/cross-compiler/aarch64-linux /opt/cross-compiler/aarch64-linux
-ENV PATH="/opt/cross-compiler/aarch64-linux/bin:${PATH}"
+WORKDIR /gem5
 
-COPY --from=gcr.io/gem5-test/gnu-cross-compiler-riscv64 /opt/cross-compiler/riscv64-linux /opt/cross-compiler/riscv64-linux
-ENV PATH="/opt/cross-compiler/riscv64-linux/bin:${PATH}"
+RUN git checkout 3bb19be083d38249d1e1652184d05b0e6406a660
+
+RUN scons -j`nproc` build/ALL/gem5.fast
+
+
