@@ -10,7 +10,7 @@ from gem5.components.processors.simple_switchable_processor import (
 from gem5.coherence_protocol import CoherenceProtocol
 from gem5.isas import ISA
 from gem5.components.processors.cpu_types import CPUTypes
-from gem5.resources.resource import Resource
+from gem5.resources.workload import Workload
 from gem5.simulate.simulator import Simulator
 from gem5.simulate.exit_event import ExitEvent
 
@@ -48,6 +48,7 @@ processor = SimpleSwitchableProcessor(
     starting_core_type=CPUTypes.TIMING,
     switch_core_type=CPUTypes.O3,
     num_cores=2,
+    isa=ISA.X86,
 )
 
 # Here we setup the board. The X86Board allows for Full-System X86 simulations.
@@ -71,18 +72,46 @@ command = (
     + "m5 exit;"
 )
 
-# Here we set the Full System workload.
-# The `set_workload` function for the X86Board takes a kernel, a disk image,
-# and, optionally, a the contents of the "readfile". In the case of the
-# "x86-ubuntu-18.04-img", a file to be executed as a script after booting the
-# system.
-board.set_kernel_disk_workload(
-    kernel=Resource(
-        "x86-linux-kernel-5.4.49",
-    ),
-    disk_image=Resource("x86-ubuntu-18.04-img"),
-    readfile_contents=command,
+# Here we set the workload. If we look up
+# http://resources.gem5.org/resources.json we can see the following entry for
+# the workload "x86-ubuntu-18.04-boot":
+# ```
+# {
+#      "type" : "workload",
+#      "name" : "x86-ubuntu-18.04-boot",
+#      "documentation" : "A full boot of Ubuntu 18.04 with Linux 5.4.49 for
+#                         X86. It runs an `m5 exit` command when the boot is
+#                         completed unless the readfile is specified. If
+#                         specified the readfile will be executed after
+#                         booting.",
+#      "function": "set_kernel_disk_workload",
+#      "resources" : {
+#          "kernel" : "x86-linux-kernel-5.4.49",
+#          "disk_image":"x86-ubuntu-18.04-img"
+#      },
+#      "additional_params" : {}
+# },
+# ```
+workload = Workload("x86-ubuntu-18.04-boot")
+
+# We want to ammend this workload slightly to carry out a script when the OS
+# boot is complete. The script immediately exits the simulation loop then,
+# when re-entered, will print "This is running on Timing CPU cores." before
+# sleeping for 1 simulated second then exiting the simulation loop again.
+#
+# We set this to the "readfile_contents" parameter. This parameter allows for
+# the setting of the contents of the readfile. The readfile is executed by this
+# resource when the OS is booted.
+command = (
+    "m5 exit;"
+    + "echo 'This is running on Timing CPU cores.';"
+    + "sleep 1;"
+    + "m5 exit;"
 )
+
+workload.set_parameter("readfile_contents", command)
+
+board.set_workload(workload)
 
 simulator = Simulator(
     board=board,

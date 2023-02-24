@@ -1,25 +1,29 @@
 from gem5.components.boards.test_board import TestBoard
 from gem5.components.memory import HBM2Stack
 from gem5.components.processors.random_generator import RandomGenerator
+from gem5.components.boards.test_board import TestBoard
+from gem5.components.processors.random_generator import RandomGenerator
+from gem5.components.cachehierarchies.classic.no_cache import NoCache
 
 import m5
 from m5.objects import Root
 
-# Obtain the compinents
-mem_size = "1GiB"
-memory = HBM2Stack(mem_size)
+# Setup the components.
+memory = HBM2Stack("1GiB")
 generator = RandomGenerator(
     duration="250us",
     rate="40GB/s",
     num_cores=1,
-    max_addr=mem_size,
+    max_addr=memory.get_size(),
 )
+cache_hierarchy = NoCache()
 
 # Add them to the Test board.
 board = TestBoard(
     clk_freq="3GHz",
     generator=generator,
     memory=memory,
+    cache_hierarchy=cache_hierarchy,
 )
 
 # Setup the root and instantiate the simulation.
@@ -29,5 +33,5 @@ board._pre_instantiate()
 m5.instantiate()
 
 # Start the traffic generator.
-board.start_traffic()
+generator.start_traffic()
 exit_event = m5.simulate()

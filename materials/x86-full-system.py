@@ -10,6 +10,6 @@ from gem5.components.processors.simple_switchable_processor import (
 from gem5.coherence_protocol import CoherenceProtocol
 from gem5.isas import ISA
 from gem5.components.processors.cpu_types import CPUTypes
-from gem5.resources.resource import Resource
+from gem5.resources.workload import Workload
 from gem5.simulate.simulator import Simulator
 from gem5.simulate.exit_event import ExitEvent
