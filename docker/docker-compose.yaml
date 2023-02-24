@@ -5,5 +5,5 @@ services:
         build:
            context: .
            dockerfile: Dockerfile
-        image: gcr.io/gem5-test/gem5-tutorial-env:latest
+        image: gcr.io/gem5-test/hpca-23-gem5-build:latest
 
