@@ -23,7 +23,7 @@ cache_hierarchy = PrivateL1PrivateL2CacheHierarchy(
     l2_size="256kB",
 )
 
-memory = DualChannelDDR4_2400()
+memory = DualChannelDDR4_2400("1GiB")
 
 processor = SimpleProcessor(
     cpu_type=CPUTypes.TIMING,
@@ -38,17 +38,22 @@ board = SimpleBoard(
     cache_hierarchy=cache_hierarchy,
 )
 
-workload = CustomWorkload(
-    function = "set_se_elfie_workload",
-    parameters = {
-        "elfie": BinaryResource("cactuBSSN-s.1_1_globalr2/cactuBSSN-s.1_1_globalr2.sim.elfie"),
-        "elfie_info": ELFieInfo(PcCountPair(0x6ffed1, 1), PcCountPair(0x6c830f, 6479283)),
-    }
+# workload = CustomWorkload(
+#     function = "set_se_elfie_workload",
+#     parameters = {
+#         "elfie": BinaryResource("cactuBSSN-s.1_1_globalr2/cactuBSSN-s.1_1_globalr2.sim.elfie"),
+#         "elfie_info": ELFieInfo(PcCountPair(0x6ffed1, 1), PcCountPair(0x6c830f, 6479283)),
+#     }
+# )
+
+# board.set_workload(workload)
+
+board.set_se_elfie_workload(
+    elfie = BinaryResource("cactuBSSN-s.1_1_globalr2/cactuBSSN-s.1_1_globalr2.sim.elfie"),
+    elfie_info = ELFieInfo(PcCountPair(0x6ffed1, 1), PcCountPair(0x6c830f, 6479283))
 )
 
 # Note: it could be useful to go to the beginning in atomic mode instead of timing
-board.set_workload(workload)
-
 def gen():
     print("Hit beginning of the region.")
     reset()
