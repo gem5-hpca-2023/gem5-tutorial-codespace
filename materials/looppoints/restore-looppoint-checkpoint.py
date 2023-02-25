@@ -14,7 +14,7 @@ from gem5.resources.looppoint import LooppointJsonLoader
 from gem5.isas import ISA
 from gem5.resources.resource import obtain_resource
 from m5.stats import reset, dump
-from argparse import Path
+from pathlib import Path
 
 requires(isa_required=ISA.X86)
 
@@ -62,8 +62,8 @@ board = SimpleBoard(
 board.set_se_looppoint_workload(
     binary=obtain_resource("x86-matrix-multiply-omp"),
     looppoint=LooppointJsonLoader(
-        looppoint_file=Path("materials/looppoints/looppoint.json"),
-        region=args.region
+        looppoint_file=Path("materials/looppoints/refs/looppoint.json"),
+        region_id=args.region
     ),
     checkpoint=Path(
         f"materials/looppoints/refs/region-{args.region}-checkpoint"
