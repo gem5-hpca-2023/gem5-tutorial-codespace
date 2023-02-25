@@ -7,7 +7,7 @@ The repository contains the following directories:
 * [docker](docker) :
 The source code for the Docker image used by [.devcontainer/Dockerfile](.devcontainer/Dockerfile) to create the Codespace Docker container.
 * gem5 :
-gem5 checkedout at revision '3bb19be'.
+gem5 checkedout at revision 'cd35c9a6'.
 * gem5-resources :
 gem5-resources checked out at 'dbac39a'.
 

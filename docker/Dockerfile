@@ -6,7 +6,7 @@ RUN git clone https://gem5.googlesource.com/public/gem5 /gem5
 
 WORKDIR /gem5
 
-RUN git checkout 3bb19be083d38249d1e1652184d05b0e6406a660
+RUN git checkout cd35c9a6194451952735f58fb09cb7983e5861ba
 
 RUN scons -j`nproc` build/ALL/gem5.fast
 
