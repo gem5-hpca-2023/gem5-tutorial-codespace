@@ -47,11 +47,26 @@ board.set_se_simpoint_workload(
         weight_list=[0.1, 0.2, 0.4, 0.3],
         warmup_interval=1000000,
     ),
-    checkpoint=None,  # TO COMPLETE HERE.
+    checkpoint=Path(""),
 )
 
 
-### TO COMPLETE HERE ###
+def max_inst():
+    warmed_up = False
+    while True:
+        if warmed_up:
+            print("end of SimPoint interval")
+            yield True
+        else:
+            print("end of warmup, starting to simulate SimPoint")
+            warmed_up = True
+            # Schedule a MAX_INSTS exit event during the simulation
+            simulator.schedule_max_insts(
+                board.get_simpoint().get_simpoint_interval()
+            )
+            dump()
+            reset()
+            yield False
 
 
 simulator = Simulator(
