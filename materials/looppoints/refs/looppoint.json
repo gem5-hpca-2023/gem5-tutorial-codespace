@@ -1,0 +1,316 @@
+{
+    "1": {
+        "simulation": {
+            "start": {
+                "pc": 4221392,
+                "global": 211076617,
+                "relative": 15326617
+            },
+            "end": {
+                "pc": 4221392,
+                "global": 219060252,
+                "relative": 23310252
+            }
+        },
+        "multiplier": 4.0,
+        "warmup": {
+            "start": {
+                "pc": 4221056,
+                "count": 23520614
+            },
+            "end": {
+                "pc": 4221392,
+                "count": 211076617
+            }
+        }
+    },
+    "2": {
+        "simulation": {
+            "start": {
+                "pc": 4221392,
+                "global": 407294228,
+                "relative": 15794228
+            },
+            "end": {
+                "pc": 4221392,
+                "global": 415282447,
+                "relative": 23782447
+            }
+        },
+        "multiplier": 5.001,
+        "warmup": {
+            "start": {
+                "pc": 4221056,
+                "count": 48111518
+            },
+            "end": {
+                "pc": 4221392,
+                "count": 407294228
+            }
+        }
+    },
+    "3": {
+        "simulation": {
+            "start": {
+                "pc": 4221392,
+                "global": 187978221,
+                "relative": 15976458
+            },
+            "end": {
+                "pc": 4221056,
+                "global": 23520614,
+                "relative": 2708114
+            }
+        },
+        "multiplier": 4.0,
+        "warmup": {
+            "start": {
+                "pc": 4221392,
+                "count": 172001763
+            },
+            "end": {
+                "pc": 4221392,
+                "count": 187978221
+            }
+        }
+    },
+    "5": {
+        "simulation": {
+            "start": {
+                "pc": 4221056,
+                "global": 59400187,
+                "relative": 1957687
+            },
+            "end": {
+                "pc": 4221392,
+                "global": 493422990,
+                "relative": 23090839
+            }
+        },
+        "multiplier": 5.0,
+        "warmup": {
+            "start": {
+                "pc": 4221392,
+                "count": 470332151
+            },
+            "end": {
+                "pc": 4221056,
+                "count": 59400187
+            }
+        }
+    },
+    "6": {
+        "simulation": {
+            "start": {
+                "pc": 4221056,
+                "global": 29162087,
+                "relative": 1689587
+            },
+            "end": {
+                "pc": 4221392,
+                "global": 250145350,
+                "relative": 23096860
+            }
+        },
+        "multiplier": 8.0,
+        "warmup": {
+            "start": {
+                "pc": 4221392,
+                "count": 227048490
+            },
+            "end": {
+                "pc": 4221056,
+                "count": 29162087
+            }
+        }
+    },
+    "7": {
+        "simulation": {
+            "start": {
+                "pc": 4221392,
+                "global": 446368834,
+                "relative": 15109930
+            },
+            "end": {
+                "pc": 4221392,
+                "global": 454352717,
+                "relative": 23093813
+            }
+        },
+        "multiplier": 10.0,
+        "warmup": {
+            "start": {
+                "pc": 4221392,
+                "count": 431258904
+            },
+            "end": {
+                "pc": 4221392,
+                "count": 446368834
+            }
+        }
+    },
+    "8": {
+        "simulation": {
+            "start": {
+                "pc": 4206672,
+                "global": 1
+            },
+            "end": {
+                "pc": 4221392,
+                "global": 6861604,
+                "relative": 6861604
+            }
+        },
+        "multiplier": 1.0
+    },
+    "9": {
+        "simulation": {
+            "start": {
+                "pc": 4221392,
+                "global": 634598476,
+                "relative": 15105584
+            },
+            "end": {
+                "pc": 4221392,
+                "global": 642586697,
+                "relative": 23093805
+            }
+        },
+        "multiplier": 13.001,
+        "warmup": {
+            "start": {
+                "pc": 4221392,
+                "count": 619492892
+            },
+            "end": {
+                "pc": 4221392,
+                "count": 634598476
+            }
+        }
+    },
+    "10": {
+        "simulation": {
+            "start": {
+                "pc": 4221392,
+                "global": 282095199,
+                "relative": 15976450
+            },
+            "end": {
+                "pc": 4221392,
+                "global": 290083433,
+                "relative": 23964684
+            }
+        },
+        "multiplier": 11.0,
+        "warmup": {
+            "start": {
+                "pc": 4221392,
+                "count": 266118749
+            },
+            "end": {
+                "pc": 4221392,
+                "count": 282095199
+            }
+        }
+    },
+    "11": {
+        "simulation": {
+            "start": {
+                "pc": 4221392,
+                "global": 140919731,
+                "relative": 15976457
+            },
+            "end": {
+                "pc": 4221056,
+                "global": 17872963,
+                "relative": 2887963
+            }
+        },
+        "multiplier": 2.001,
+        "warmup": {
+            "start": {
+                "pc": 4221392,
+                "count": 124943274
+            },
+            "end": {
+                "pc": 4221392,
+                "count": 140919731
+            }
+        }
+    },
+    "12": {
+        "simulation": {
+            "start": {
+                "pc": 4221392,
+                "global": 368227872,
+                "relative": 15980376
+            },
+            "end": {
+                "pc": 4221392,
+                "global": 376215478,
+                "relative": 23967982
+            }
+        },
+        "multiplier": 9.999,
+        "warmup": {
+            "start": {
+                "pc": 4221392,
+                "count": 352247496
+            },
+            "end": {
+                "pc": 4221392,
+                "count": 368227872
+            }
+        }
+    },
+    "13": {
+        "simulation": {
+            "start": {
+                "pc": 4221392,
+                "global": 172001763,
+                "relative": 15973412
+            },
+            "end": {
+                "pc": 4221392,
+                "global": 179989993,
+                "relative": 23961642
+            }
+        },
+        "multiplier": 6.0,
+        "warmup": {
+            "start": {
+                "pc": 4221392,
+                "count": 156028351
+            },
+            "end": {
+                "pc": 4221392,
+                "count": 172001763
+            }
+        }
+    },
+    "14": {
+        "simulation": {
+            "start": {
+                "pc": 4221392,
+                "global": 595528209,
+                "relative": 15105593
+            },
+            "end": {
+                "pc": 4221392,
+                "global": 603516434,
+                "relative": 23093818
+            }
+        },
+        "multiplier": 7.0,
+        "warmup": {
+            "start": {
+                "pc": 4221392,
+                "count": 580422616
+            },
+            "end": {
+                "pc": 4221392,
+                "count": 595528209
+            }
+        }
+    }
+}
