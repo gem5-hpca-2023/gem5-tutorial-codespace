@@ -1,0 +1,2 @@
+Sim-Start Addr  0x6ffed1  global_addrcount: 1
+Sim-End Addr  0x6c830f  global_addrcount: 6479283
