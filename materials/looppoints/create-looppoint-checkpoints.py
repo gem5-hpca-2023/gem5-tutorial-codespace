@@ -8,6 +8,7 @@ from gem5.components.processors.simple_processor import SimpleProcessor
 from gem5.components.processors.cpu_types import CPUTypes
 from gem5.isas import ISA
 from gem5.resources.resource import obtain_resource
+from gem5.resources.looppoint import LooppointCsvLoader
 from pathlib import Path
 from gem5.simulate.exit_event_generators import (
     looppoint_save_checkpoint_generator,
@@ -43,19 +44,20 @@ board = SimpleBoard(
     cache_hierarchy=cache_hierarchy,
 )
 
-
+# Here we load the Pinpoint Looppoints CSV workload with the target binary and
+# input arguments.
 board.set_se_looppoint_workload(
     binary=obtain_resource("x86-matrix-multiply-omp"),
     arguments=[100, 8],
-    looppoint=obtain_resource(
-        "x86-matrix-multiply-omp-100-8-global-pinpoints"
-    ),
+    looppoint=LooppointCsvLoader("materials/refs/looppoint-pinpoints.csv"),
 )
 
-
+# Here we specify where this script should output the checkpoints.
 dir = Path("checkpoint_outputs")
 dir.mkdir(exist_ok=True)
 
+# This code ensures that when a looppoint region begins (inclusive of warmup)
+# a checkpoint will be taken. It also updates our looppoint data structure.
 simulator = Simulator(
     board=board,
     on_exit_event={
@@ -75,5 +77,5 @@ simulator = Simulator(
 
 simulator.run()
 
-# Output the JSON file
+# Output the JSON file. To be used when restoring.
 board.get_looppoint().output_json_file("looppoint.json")

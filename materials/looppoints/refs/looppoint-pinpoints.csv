@@ -1,0 +1,135 @@
+# Regions based on: /home/alen/isca2022/looppoint/tools/sde-external-9.0.0-2021-11-07-lin/pinplay-scripts/pcregions.py --label_file t.labels --warmup_factor 2 --tid global --bbv_file t.bb --region_file t.simpoints --weight_file t.weights 
+
+# comment,thread-id,region-id,start-pc, start-image-name, start-image-offset, start-pc-count,end-pc, end-image-name, end-image-offset, end-pc-count,end-pc-relative-count, region-length, region-weight, region-multiplier, region-type
+
+# RegionId = 1 Slice = 27 Icount = 2160042521 Length = 79958388 Weight = 0.04651 Multiplier = 4.000 ClusterSlicecount = 4 ClusterIcount = 320005167
+#Start: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 211076617  source-info: matrix-omp.cpp:75
+#End: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 219060252  relative_count: 1060676.0 source-info: matrix-omp.cpp:75
+cluster 0 from slice 27,global,1,0x4069d0,matrix-omp,0x69d0,211076617,0x4069d0,matrix-omp,0x69d0,219060252,1060676,79958388,0.04651,4.000,simulation
+
+# RegionId = 2 Slice = 52 Icount = 4160001603 Length = 80000011 Weight = 0.05814 Multiplier = 5.001 ClusterSlicecount = 5 ClusterIcount = 400040399
+#Start: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 407294228  source-info: matrix-omp.cpp:75
+#End: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 415282447  relative_count: 1035231.0 source-info: matrix-omp.cpp:75
+cluster 1 from slice 52,global,2,0x4069d0,matrix-omp,0x69d0,407294228,0x4069d0,matrix-omp,0x69d0,415282447,1035231,80000011,0.05814,5.001,simulation
+
+# RegionId = 3 Slice = 24 Icount = 1920000792 Length = 80027459 Weight = 0.04651 Multiplier = 4.000 ClusterSlicecount = 4 ClusterIcount = 320021091
+#Start: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 187978221  source-info: matrix-omp.cpp:75
+#End: pc : 0x406880 image: matrix-omp offset: 0x6880 absolute_count: 23520614  relative_count: 144352.0 source-info: matrix-omp.cpp:95
+cluster 2 from slice 24,global,3,0x4069d0,matrix-omp,0x69d0,187978221,0x406880,matrix-omp,0x6880,23520614,144352,80027459,0.04651,4.000,simulation
+
+# RegionId = 5 Slice = 62 Icount = 4960001982 Length = 80000038 Weight = 0.05814 Multiplier = 5.000 ClusterSlicecount = 5 ClusterIcount = 400005609
+#Start: pc : 0x406880 image: matrix-omp offset: 0x6880 absolute_count: 59400187  source-info: matrix-omp.cpp:95
+#End: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 493422990  relative_count: 923025.0 source-info: matrix-omp.cpp:75
+cluster 4 from slice 62,global,5,0x406880,matrix-omp,0x6880,59400187,0x4069d0,matrix-omp,0x69d0,493422990,923025,80000038,0.05814,5.000,simulation
+
+# RegionId = 6 Slice = 31 Icount = 2480001019 Length = 80027856 Weight = 0.09302 Multiplier = 8.000 ClusterSlicecount = 8 ClusterIcount = 639987923
+#Start: pc : 0x406880 image: matrix-omp offset: 0x6880 absolute_count: 29162087  source-info: matrix-omp.cpp:95
+#End: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 250145350  relative_count: 878899.0 source-info: matrix-omp.cpp:75
+cluster 5 from slice 31,global,6,0x406880,matrix-omp,0x6880,29162087,0x4069d0,matrix-omp,0x69d0,250145350,878899,80027856,0.09302,8.000,simulation
+
+# RegionId = 7 Slice = 57 Icount = 4560041160 Length = 79960651 Weight = 0.11628 Multiplier = 10.000 ClusterSlicecount = 10 ClusterIcount = 799960946
+#Start: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 446368834  source-info: matrix-omp.cpp:75
+#End: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 454352717  relative_count: 1019689.0 source-info: matrix-omp.cpp:75
+cluster 6 from slice 57,global,7,0x4069d0,matrix-omp,0x69d0,446368834,0x4069d0,matrix-omp,0x69d0,454352717,1019689,79960651,0.11628,10.000,simulation
+
+# RegionId = 8 Slice = 0 Icount = 0 Length = 80000062 Weight = 0.01163 Multiplier = 1.000 ClusterSlicecount = 1 ClusterIcount = 80000061
+#Start: pc : 0x403050 image: matrix-omp offset: 0x3050 absolute_count: 1  source-info: matrix-omp.cpp:17
+#End: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 6861604  relative_count: 864190.0 source-info: matrix-omp.cpp:75
+cluster 7 from slice 0,global,8,0x403050,matrix-omp,0x3050,1,0x4069d0,matrix-omp,0x69d0,6861604,864190,80000062,0.01163,1.000,simulation
+
+# RegionId = 9 Slice = 81 Icount = 6480002566 Length = 80000017 Weight = 0.15116 Multiplier = 13.001 ClusterSlicecount = 13 ClusterIcount = 1040045961
+#Start: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 634598476  source-info: matrix-omp.cpp:75
+#End: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 642586697  relative_count: 1012257.0 source-info: matrix-omp.cpp:75
+cluster 8 from slice 81,global,9,0x4069d0,matrix-omp,0x69d0,634598476,0x4069d0,matrix-omp,0x69d0,642586697,1012257,80000017,0.15116,13.001,simulation
+
+# RegionId = 10 Slice = 36 Icount = 2880001147 Length = 80000021 Weight = 0.12791 Multiplier = 11.000 ClusterSlicecount = 11 ClusterIcount = 879968292
+#Start: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 282095199  source-info: matrix-omp.cpp:75
+#End: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 290083433  relative_count: 1008513.0 source-info: matrix-omp.cpp:75
+cluster 9 from slice 36,global,10,0x4069d0,matrix-omp,0x69d0,282095199,0x4069d0,matrix-omp,0x69d0,290083433,1008513,80000021,0.12791,11.000,simulation
+
+# RegionId = 11 Slice = 18 Icount = 1440000632 Length = 80000048 Weight = 0.02326 Multiplier = 2.001 ClusterSlicecount = 2 ClusterIcount = 160040723
+#Start: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 140919731  source-info: matrix-omp.cpp:75
+#End: pc : 0x406880 image: matrix-omp offset: 0x6880 absolute_count: 17872963  relative_count: 106579.0 source-info: matrix-omp.cpp:95
+cluster 10 from slice 18,global,11,0x4069d0,matrix-omp,0x69d0,140919731,0x406880,matrix-omp,0x6880,17872963,106579,80000048,0.02326,2.001,simulation
+
+# RegionId = 12 Slice = 47 Icount = 3760037208 Length = 79994218 Weight = 0.11628 Multiplier = 9.999 ClusterSlicecount = 10 ClusterIcount = 799899133
+#Start: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 368227872  source-info: matrix-omp.cpp:75
+#End: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 376215478  relative_count: 993878.0 source-info: matrix-omp.cpp:75
+cluster 11 from slice 47,global,12,0x4069d0,matrix-omp,0x69d0,368227872,0x4069d0,matrix-omp,0x69d0,376215478,993878,79994218,0.11628,9.999,simulation
+
+# RegionId = 13 Slice = 22 Icount = 1760000764 Length = 79999993 Weight = 0.06977 Multiplier = 6.000 ClusterSlicecount = 6 ClusterIcount = 480027237
+#Start: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 172001763  source-info: matrix-omp.cpp:75
+#End: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 179989993  relative_count: 924811.0 source-info: matrix-omp.cpp:75
+cluster 12 from slice 22,global,13,0x4069d0,matrix-omp,0x69d0,172001763,0x4069d0,matrix-omp,0x69d0,179989993,924811,79999993,0.06977,6.000,simulation
+
+# RegionId = 14 Slice = 76 Icount = 6080002419 Length = 80000030 Weight = 0.08140 Multiplier = 7.000 ClusterSlicecount = 7 ClusterIcount = 560000161
+#Start: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 595528209  source-info: matrix-omp.cpp:75
+#End: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 603516434  relative_count: 1062544.0 source-info: matrix-omp.cpp:75
+cluster 13 from slice 76,global,14,0x4069d0,matrix-omp,0x69d0,595528209,0x4069d0,matrix-omp,0x69d0,603516434,1062544,80000030,0.08140,7.000,simulation
+
+# RegionId = 15 Slice = 25 Icount = 2000028251 Length = 160014270 WarmupFactor = 2 
+#Start: pc : 0x406880 image: matrix-omp offset: 0x6880 absolute_count: 23520614 source-info: matrix-omp.cpp:95
+#End: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 211076617  relative_count: 1933632.0 source-info: matrix-omp.cpp:75
+Warmup for regionid 1,global,15,0x406880,matrix-omp,0x6880,23520614,0x4069d0,matrix-omp,0x69d0,211076617,1933632,160014270,0.00000,0.000,warmup:1
+
+# RegionId = 16 Slice = 50 Icount = 4000001542 Length = 160000061 WarmupFactor = 2 
+#Start: pc : 0x406880 image: matrix-omp offset: 0x6880 absolute_count: 48111518 source-info: matrix-omp.cpp:95
+#End: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 407294228  relative_count: 2004125.0 source-info: matrix-omp.cpp:75
+Warmup for regionid 2,global,16,0x406880,matrix-omp,0x6880,48111518,0x4069d0,matrix-omp,0x69d0,407294228,2004125,160000061,0.00000,0.000,warmup:2
+
+# RegionId = 17 Slice = 22 Icount = 1760000764 Length = 160000028 WarmupFactor = 2 
+#Start: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 172001763 source-info: matrix-omp.cpp:75
+#End: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 187978221  relative_count: 1946376.0 source-info: matrix-omp.cpp:75
+Warmup for regionid 3,global,17,0x4069d0,matrix-omp,0x69d0,172001763,0x4069d0,matrix-omp,0x69d0,187978221,1946376,160000028,0.00000,0.000,warmup:3
+
+# RegionId = 19 Slice = 60 Icount = 4800028977 Length = 159973005 WarmupFactor = 2 
+#Start: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 470332151 source-info: matrix-omp.cpp:75
+#End: pc : 0x406880 image: matrix-omp offset: 0x6880 absolute_count: 59400187  relative_count: 219220.0 source-info: matrix-omp.cpp:95
+Warmup for regionid 5,global,19,0x4069d0,matrix-omp,0x69d0,470332151,0x406880,matrix-omp,0x6880,59400187,219220,159973005,0.00000,0.000,warmup:5
+
+# RegionId = 20 Slice = 29 Icount = 2320000944 Length = 160000075 WarmupFactor = 2 
+#Start: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 227048490 source-info: matrix-omp.cpp:75
+#End: pc : 0x406880 image: matrix-omp offset: 0x6880 absolute_count: 29162087  relative_count: 212613.0 source-info: matrix-omp.cpp:95
+Warmup for regionid 6,global,20,0x4069d0,matrix-omp,0x69d0,227048490,0x406880,matrix-omp,0x6880,29162087,212613,160000075,0.00000,0.000,warmup:6
+
+# RegionId = 21 Slice = 55 Icount = 4400001705 Length = 160039455 WarmupFactor = 2 
+#Start: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 431258904 source-info: matrix-omp.cpp:75
+#End: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 446368834  relative_count: 1934734.0 source-info: matrix-omp.cpp:75
+Warmup for regionid 7,global,21,0x4069d0,matrix-omp,0x69d0,431258904,0x4069d0,matrix-omp,0x69d0,446368834,1934734,160039455,0.00000,0.000,warmup:7
+
+# No warmup possible for regionid 8 with WarmupFactor 2
+
+# RegionId = 23 Slice = 79 Icount = 6320002528 Length = 160000038 WarmupFactor = 2 
+#Start: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 619492892 source-info: matrix-omp.cpp:75
+#End: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 634598476  relative_count: 1914956.0 source-info: matrix-omp.cpp:75
+Warmup for regionid 9,global,23,0x4069d0,matrix-omp,0x69d0,619492892,0x4069d0,matrix-omp,0x69d0,634598476,1914956,160000038,0.00000,0.000,warmup:9
+
+# RegionId = 24 Slice = 34 Icount = 2720001105 Length = 160000042 WarmupFactor = 2 
+#Start: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 266118749 source-info: matrix-omp.cpp:75
+#End: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 282095199  relative_count: 1949519.0 source-info: matrix-omp.cpp:75
+Warmup for regionid 10,global,24,0x4069d0,matrix-omp,0x69d0,266118749,0x4069d0,matrix-omp,0x69d0,282095199,1949519,160000042,0.00000,0.000,warmup:10
+
+# RegionId = 25 Slice = 16 Icount = 1280000588 Length = 160000044 WarmupFactor = 2 
+#Start: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 124943274 source-info: matrix-omp.cpp:75
+#End: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 140919731  relative_count: 1947091.0 source-info: matrix-omp.cpp:75
+Warmup for regionid 11,global,25,0x4069d0,matrix-omp,0x69d0,124943274,0x4069d0,matrix-omp,0x69d0,140919731,1947091,160000044,0.00000,0.000,warmup:11
+
+# RegionId = 26 Slice = 45 Icount = 3600001357 Length = 160035851 WarmupFactor = 2 
+#Start: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 352247496 source-info: matrix-omp.cpp:75
+#End: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 368227872  relative_count: 1987144.0 source-info: matrix-omp.cpp:75
+Warmup for regionid 12,global,26,0x4069d0,matrix-omp,0x69d0,352247496,0x4069d0,matrix-omp,0x69d0,368227872,1987144,160035851,0.00000,0.000,warmup:12
+
+# RegionId = 27 Slice = 20 Icount = 1600028339 Length = 159972425 WarmupFactor = 2 
+#Start: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 156028351 source-info: matrix-omp.cpp:75
+#End: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 172001763  relative_count: 2080288.0 source-info: matrix-omp.cpp:75
+Warmup for regionid 13,global,27,0x4069d0,matrix-omp,0x69d0,156028351,0x4069d0,matrix-omp,0x69d0,172001763,2080288,159972425,0.00000,0.000,warmup:13
+
+# RegionId = 28 Slice = 74 Icount = 5920002374 Length = 160000045 WarmupFactor = 2 
+#Start: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 580422616 source-info: matrix-omp.cpp:75
+#End: pc : 0x4069d0 image: matrix-omp offset: 0x69d0 absolute_count: 595528209  relative_count: 1903109.0 source-info: matrix-omp.cpp:75
+Warmup for regionid 14,global,28,0x4069d0,matrix-omp,0x69d0,580422616,0x4069d0,matrix-omp,0x69d0,595528209,1903109,160000045,0.00000,0.000,warmup:14
+
+# First PC, 0x403050
+# Total instructions in 13 regions = 1039968792
+# Total instructions in workload = 6880002703
+# Total slices in workload = 86
