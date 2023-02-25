@@ -1,6 +1,7 @@
 from gem5.components.boards.test_board import TestBoard
 from gem5.components.memory.single_channel import SingleChannelDDR_1600
 from gem5.components.processors.random_generator import RandomGenerator
+from gem5.components.cachehierarchies.classic.no_cache import NoCache
 
 import m5
 from m5.objects import Root
@@ -14,5 +15,5 @@ board._pre_instantiate()
 m5.instantiate()
 
 # Start the traffic generator.
-board.start_traffic()
+generator.start_traffic()
 exit_event = m5.simulate()
