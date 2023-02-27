@@ -67,7 +67,7 @@ board = X86Board(
 # output.
 command = (
     "m5 exit;"
-    + "echo 'This is running on Timing CPU cores.';"
+    + "echo 'This is running on Timing O3 cores.';"
     + "sleep 1;"
     + "m5 exit;"
 )
