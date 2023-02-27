@@ -49,7 +49,9 @@ board = SimpleBoard(
 board.set_se_looppoint_workload(
     binary=obtain_resource("x86-matrix-multiply-omp"),
     arguments=[100, 8],
-    looppoint=LooppointCsvLoader(pinpoints_file="materials/looppoints/refs/looppoint-pinpoints.csv"),
+    looppoint=LooppointCsvLoader(
+        pinpoints_file="materials/looppoints/refs/looppoint-pinpoints.csv"
+    ),
 )
 
 # Here we specify where this script should output the checkpoints.

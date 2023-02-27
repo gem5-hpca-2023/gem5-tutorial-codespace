@@ -24,7 +24,7 @@ parser.add_argument(
     "--region",
     type=str,
     required=False,
-    choices=("1", "2","3"),
+    choices=("1", "2", "3"),
     default="1",
     help="The checkpoint region to restore from.",
 )
@@ -63,7 +63,7 @@ board.set_se_looppoint_workload(
     binary=obtain_resource("x86-matrix-multiply-omp"),
     looppoint=LooppointJsonLoader(
         looppoint_file=Path("materials/looppoints/refs/looppoint.json"),
-        region_id=args.region
+        region_id=args.region,
     ),
     checkpoint=Path(
         f"materials/looppoints/refs/region-{args.region}-checkpoint"
