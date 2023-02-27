@@ -104,7 +104,7 @@ workload = Workload("x86-ubuntu-18.04-boot")
 # resource when the OS is booted.
 command = (
     "m5 exit;"
-    + "echo 'This is running on Timing CPU cores.';"
+    + "echo 'This is running on O3 CPU cores.';"
     + "sleep 1;"
     + "m5 exit;"
 )
