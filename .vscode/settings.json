@@ -1,3 +1,11 @@
 {
-    "python.formatting.provider": "black"
+    "python.formatting.provider": "black",
+    "python.analysis.extraPaths":[
+        "/workspaces/gem5-tutorial-codespace/gem5/src/python/gem5/components/board",
+        "/workspaces/gem5-tutorial-codespace/gem5/src/python/gem5/components/cachehierarchies",
+        "/workspaces/gem5-tutorial-codespace/gem5/src/python/gem5/components/memory",
+        "/workspaces/gem5-tutorial-codespace/gem5/src/python/gem5/components/processors",
+        "/workspaces/gem5-tutorial-codespace/gem5/src/python/gem5/simulate"
+    ]
+
 }
